@@ -10,7 +10,7 @@ def removeprefix(string, prefix):
                 return string[len(prefix):]
             else:
                 return LookupError
-'''
+
 # Download zip file from internet                
 url = 'https://csrc.nist.gov/CSRC/media/Projects/Cryptographic-Algorithm-Validation-Program/documents/shs/shabytetestvectors.zip'
 sha = wget.download(url)
@@ -18,7 +18,7 @@ sha = wget.download(url)
 # Unzip zip file to scratch folder
 zipfile = ZipFile('./shabytetestvectors.zip')
 zipfile.extractall(path='./scratch')
-'''
+
 # rsp_parser class
 class rsp_parser:
     
@@ -62,7 +62,6 @@ sha_short256.parse()
 
 sha_long256 = rsp_parser('SHA256LongMsg.rsp')
 sha_long256.parse()
-'''
+
 os.remove('shabytetestvectors.zip')
 shutil.rmtree('./scratch/shabytetestvectors')
-'''
